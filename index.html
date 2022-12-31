@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./src/email.gif" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/hamburgers.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>ChatServiceWorker</title>
+</head>
+
+<body>
+    <header class="header" data-aos="zoom-in-down">
+        <h1>Real Time SW</h1>
+        <img class="logo" src="./src/email.gif" alt="logo">
+    </header>
+    <div class="main" data-aos="zoom-in-up" data-aos-duration="300">
+        <input autofocus tabindex="1" autocomplete="off" type="text" id="name-usuario" placeholder="Ingresa tu nombre">
+        <div class="menu" title="Opciones">
+            <!-- Este nav siempre se va a mostrar -->
+            <div class="menu__header">
+                <p class="intruction" data-aos="zoom-out-down" data-aos-duration="400" > Ingresa tu nombre en el campo de arriba👆🏽 y luego empieza a
+                    chatear👇🏽 </p>
+                <div class="menu__nav">
+                    <div class="hamburger hamburger--minus">
+                        <div class="hamburger-box">
+                            <div class="hamburger-inner"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu__configs">
+
+                <div class="select-container">
+                    <label for="f-family">Tipo de fuente:</label>
+                    <select name="f-family" id="f-family">
+                        <option value="times">Times New Roman</option>
+                        <option value="serif">Sans serif</option>
+                        <option value="monospace">Monospace</option>
+                    </select>
+                </div>
+                <div class="select-container">
+                    <label for="f-size">Tamaño de fuente:</label>
+                    <select name="f-size" id="f-size">
+                        <option value="small">Pequeño</option>
+                        <option value="medium">Mediano</option>
+                        <option value="large">Grande</option>
+                    </select>
+                </div>
+
+                <h3 class="choose-bg-title">Fondo</h3>
+                <div class="choose-bg">
+                    <div class="choose-bg__color">
+                        <label for="back-color">Color solido: </label>
+                        <input type="color" id="back-color">
+                    </div>
+
+                    <div>
+                        <label for="back-image">Imagen de fondo</label>
+                        <input type="file" id="back-image">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <main class="chat">
+            <ul class="messages">
+
+            </ul>
+            <form class="form">
+                <input tabindex="2" autocomplete="off" type="text" id="input-msg" placeholder=" Escribe tu mensaje">
+                <button class="btn-send">
+                    <img width="25" src="./src/send-message.png" alt="">
+                </button>
+            </form>
+
+        </main>
+    </div>
+    <footer class="footer">
+        <p>Desarrollado por <a target="_blank" href="https://github.com/LuisJimenez19">mi</a> </p>
+        <p>version 1.0</p>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true
+        });
+    </script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

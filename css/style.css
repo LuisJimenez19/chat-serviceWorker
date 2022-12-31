@@ -1,0 +1,467 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* background-color: #333; */
+    background: radial-gradient(#aaa 30%, #333);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    min-height: 100vh;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+input,
+button {
+    background: none;
+    border: none;
+    outline: none
+}
+
+a {
+    color: #4285F4;
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.08em;
+}
+
+/* <--------------------------------scroll bar-------------------- */
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #4285F4;
+}
+
+::-moz-scrollbar {
+    width: 8px;
+    background-color: #F5F5F5;
+}
+
+::-moz-scrollbar-thumb {
+    border-radius: 10px;
+    background: #4285F4;
+}
+
+::-ms-scrollbar {
+    width: 8px;
+    background-color: #F5F5F5;
+}
+
+::-ms-scrollbar-thumb {
+    border-radius: 10px;
+    background: #4285F4;
+}
+
+
+/* <-----------------header------------------ */
+.header {
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    margin-top: 50px;
+}
+
+.logo {
+    width: 60px;
+    height: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+
+/* <--------------------------------------main----------------- */
+#name-usuario {
+    padding: 20px;
+    font-size: 1em;
+    color: #ffffff;
+    font-family: sans-serif;
+    width: 100%;
+    font-weight: bold;
+}
+#name-usuario::placeholder{
+    font-weight: bold;
+    color: #a0a0a0;
+}
+
+.main {
+    /* border: 1px solid whitesmoke; */
+    border-radius: 20px;
+    width: 85%;
+    max-width: 600px;
+    min-height: 500px;
+
+    margin: 20px auto;
+    overflow: hidden;
+
+    position: relative;
+
+    font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 0 0 30px #1e1b1b;
+
+    padding-bottom: 50px;
+}
+
+/* ---------------font family-------------- */
+.main.serif {
+    font-family: sans-serif;
+}
+
+.main.times {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.main.monospace {
+    font-family: monospace;
+}
+
+/* <-------------font size-------------- */
+
+
+.main.small {
+    font-size: .7em;
+}
+
+.main.medium {
+    font-size: 1em;
+}
+
+.main.large {
+    font-size: 1.4em;
+}
+
+/* <_------------------------menu/nav----------------- */
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    background-color: rgb(9 106 217);
+    position: relative;
+}
+
+.menu__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.intruction {
+    padding-left: 10px;
+    font-size: 1em;
+    text-align: center;
+}
+
+
+/* <-----------------------------------menu dropdow----------------- */
+
+.menu__configs {
+    /* display: none; */
+    background-color: #ccc;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #222;
+    /* font-family: sans-serif; */
+
+    position: absolute;
+
+    top: 55px;
+    height: 0px;
+    overflow: hidden;
+
+    transition: .2s;
+    z-index: 10000;
+}
+
+.menu__configs.is-active {
+
+    padding: 20px;
+    height: unset;
+}
+
+/* <----------------------Estilos para el select y options----------- */
+.select-container {
+    border-bottom: 1px solid #000000;
+    padding: 10px 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 200px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #707281;
+    color: #000000;
+    font-size: 14px;
+    padding: 0 10px;
+    transition: box-shadow 0.2s ease-in-out;
+    height: 35px;
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+select:focus {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+option {
+    background-color: #a5a9c5;
+    color: #000000;
+    height: 20px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+option:hover {
+    background-color: #444654;
+    color: #FFFFFF;
+}
+
+
+.choose-bg {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.choose-bg-title {
+    text-align: center;
+}
+
+.choose-bg__color {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ----------label  for="back-color"--------- */
+label[for="back-color"] {
+    font-size: 1.1em;
+}
+
+/* <------------------------------intpu file-------------- */
+input[type="file"] {
+    display: none;
+}
+
+label[for="back-image"] {
+    background-color: rgb(9 106 217);
+    padding: 10px 20px;
+    /* margin-top: 20px; */
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.3s;
+}
+
+label[for="back-image"]:hover {
+    border-radius: 15px;
+    transform: scale(0.95);
+    background-color: #4285F4;
+}
+
+
+
+
+/* -----------------------chat--------------- */
+
+
+/* <------------------messages------------------ */
+.messages {
+    /* background-color: rgb(0, 0, 0); */
+    background-image: url("../src/sun-tornado.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 350px;
+    max-height: 450px;
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+
+.msg-container {
+    width: 70%;
+}
+
+/* <-----------------------msg received--------------------> */
+
+.name {
+    padding-left: 10px;
+    font-size: .9em;
+    display: block;
+}
+
+.msg {
+    border-radius: 10px;
+    background-color: rgba(63, 54, 54, 0.802);
+    padding: 15px 10px;
+    margin: 5px 0;
+
+    word-wrap: break-word;
+}
+
+.date {
+    font-size: .8em;
+    font-family: monospace;
+    display: block;
+    text-align: end;
+}
+
+.msg-container.received {
+    animation: left-to-right .2s both;
+}
+
+/* Animacion para los mensajes entrantes */
+@keyframes left-to-right {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* <-----------------------msg user------------------> */
+.msg-container.send {
+    transition: .2s;
+    align-self: flex-end;
+    animation: right-to-left .2s both;
+}
+
+.msg-container.send>.name {
+    text-align: end;
+    padding-right: 10px;
+}
+
+.msg-container.send>.date {
+    text-align: start;
+    padding-left: 10px;
+}
+
+.msg-container.send>.msg {
+    background-color: #31402dcd;
+}
+
+/* Animacion para los mensajes entrantes */
+@keyframes right-to-left {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* <-----------------form---------------- */
+.form {
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    width: 100%;
+    height: 50px;
+}
+
+#input-msg {
+    display: block;
+    width: 85%;
+    background-color: rgb(71, 70, 70);
+    font-size: 1.1em;
+    padding-left: 10px;
+    color: #f2f2f2;
+    font-family: sans-serif;
+}
+
+.btn-send {
+    width: 15%;
+    height: 50px;
+
+    background-color: rgb(45, 44, 44);
+}
+
+
+
+/* <--------------footer------------- */
+.footer {
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+
+    background-color: #222;
+    padding: 0 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: .9em;
+    animation: showFooter .3s both;
+}
+
+@keyframes showFooter {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+        transform: translateZ(100%) ;
+    }
+
+    100% {
+        opacity: 1;
+        
+        transform: translateY(0);
+        transform: translateZ(0);
+    }
+}
